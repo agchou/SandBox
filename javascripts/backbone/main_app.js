@@ -1,6 +1,5 @@
 var Pixlee = (function(Backbone, Marionette) {
-    var App,
-        _this = this;
+    var App, _this = this;
 
     App = new Marionette.Application();
 
@@ -10,20 +9,15 @@ var Pixlee = (function(Backbone, Marionette) {
         App.rootRoute = "photowall";
     });
 
-
     App.addRegions({
         header_region: '#header_region',
         main_region: '#main_region',
         footer_region: '#footer_region'
     });
 
-
-
     App.reqres.setHandler('default:region', function() {
         return App.main_region;
     });
-
-
 
     App.on('initialize:after', function() {
         this.startHistory();

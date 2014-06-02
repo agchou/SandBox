@@ -10,5 +10,9 @@ _.templateSettings = {
 window.JST = {};
 
 window.JST['photowall_layout'] = _.template(
-    '<div id="photos_regions"></div><div id="pagination_region"></div>'
+    '<div id="photos_region"></div><div id="pagination_region"></div>'
+);
+
+window.JST['photowall_photo'] = _.template(
+    ''
 );

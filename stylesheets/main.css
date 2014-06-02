@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+}
+
+#photos_region {
+    width: 960px;
+    margin: auto;
+}
+
+.thumbnail {
+    display: inline-block;
+    height: 230px;
+    width: 230px;
+    padding: 5px;
+}

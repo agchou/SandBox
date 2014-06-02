@@ -7,14 +7,14 @@ Pixlee.module('PhotowallApp.Show', function(Show, App, Backbone, Marionette, $, 
             var photos = App.photos;
             //Instantiate the view and pass parameter to it
             this.view = this.getPhotowallView({
-                collection:photos
+                collection: photos
             });
             //Show the view on the region passsed as an options
             region.show(this.view);
             //Example of event handling
-            this.listenTo(this.view,"show",function(){
-
-            },this);
+            this.listenTo(this.view, "show", function() {
+                region.show(this.view);
+            }, this);
         },
         getPhotowallView: function(options) {
             return new Show.PhotowallLayout(options);
